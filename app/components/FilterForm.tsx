@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { TextField, MenuItem, InputAdornment, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 interface FilterProps {
   categories: string[];

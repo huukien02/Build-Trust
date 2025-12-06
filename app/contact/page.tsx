@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -32,12 +31,7 @@ export default function ContactPage() {
       </div>
 
       <div className="pt-[120px] pb-20 px-4 flex justify-center">
-        <motion.div
-          className="w-full max-w-5xl bg-white rounded-xl shadow-xl p-8 space-y-10"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="w-full max-w-5xl bg-white rounded-xl shadow-xl p-8 space-y-10">
           {/* Thông tin liên hệ */}
           <div className="space-y-2">
             <h1 className="text-3xl font-bold text-gray-800">
@@ -122,7 +116,7 @@ export default function ContactPage() {
               Gửi
             </button>
           </form>
-        </motion.div>
+        </div>
       </div>
 
       <Footer />

@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { motion } from "framer-motion";
 
 interface NewsItem {
   id: number;
@@ -83,13 +82,9 @@ export default function Page() {
       <div className="flex justify-center pt-[120px] pb-[100px] px-4">
         <div className="w-[1200px] space-y-8">
           {currentItems.map((news, index) => (
-            <motion.div
+            <div
               key={news.id}
               className="flex flex-col md:flex-row rounded-lg shadow-xl overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               {/* Nội dung */}
               <div className="p-6 md:w-2/3 flex flex-col justify-center">
@@ -102,15 +97,15 @@ export default function Page() {
 
               {/* Ảnh */}
               <div className="md:w-1/3 w-full overflow-hidden">
-                <motion.div className="w-full aspect-video relative">
-                  <motion.img
+                <div className="w-full aspect-video relative">
+                  <img
                     src={news.image}
                     alt={news.title}
                     className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           ))}
 
           {/* Phân trang */}
